@@ -1,5 +1,19 @@
-/* navbar styles & positiong */
+/* NavBar*/
 
-.mr-auto{
-  
+.companyName{
+  position: absolute;
+  left: 45%
+}
+
+
+section{
+  display: flex;
+}
+
+.nav{
+  font-family: 'Oxygen', sans-serif;
+}
+
+.companyName{
+  font: 40px;
 }
