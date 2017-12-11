@@ -1,12 +1,19 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
 import 'bootstrap/dist/css/bootstrap.css';
-import "typeface-oxygen"
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { makeMainRoutes } from './routes';
+import WebFont from 'webfontloader';
+
+WebFont.load({
+  google: {
+    families: ['Oxygen Web:300,400,700', 'sans-serif']
+  }
+});
 
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+const routes = makeMainRoutes();
+
+ReactDOM.render(
+  routes,
+  document.getElementById('root')
+);

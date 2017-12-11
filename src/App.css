@@ -1,19 +1,312 @@
-/* NavBar*/
 
-.companyName{
-  position: absolute;
-  left: 45%
+
+.container .jumbotron, .container-fluid .jumbotron {
+  border-radius: 0px !important;
+}
+
+.btn-margin {
+  margin: 7px 3px;
+}
+.no-border {
+  border-radius: 0px;
+  background-color: rgb(153, 153, 153);
+  font-family: 'Oxygen', sans-serif !important;
+}
+
+.createorlog{
+    font-family: 'Oxygen',sans-serif;
+    color: red;
+    font-size:30pt;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.createorlog1{
+    font-family: 'Oxygen',sans-serif;
+    color: red;
+    font-size:30pt;
+}
+
+.createorlog2{
+    font-family: 'Oxygen',sans-serif;
+    color: rgb(255, 255, 255);
+    font-size:30pt;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.createorlog3{
+    font-family: 'Oxygen',sans-serif;
+    color: red;
+    font-size:30pt;
+}
+
+.createorlogS{
+    font-family: 'Oxygen',sans-serif;
+    color: red;
+    font-size:15pt;
+}
+.createorlogS2{
+    font-family: 'Oxygen',sans-serif;
+    color: black;
+    font-size:15pt;
+}
+
+.createorlogN8{
+    font-family: 'Oxygen', cursive;
+    color: black;
+    font-size:30pt;
+}
+
+.createorlog4{
+    font-family: 'Oxygen',sans-serif;
+    color: red;
+    font-size:30pt;
 }
 
 
-section{
-  display: flex;
+.navbar-brand{
+  margin-top: 7px;
+  position: absolute !important;
+  left: 40% !important;
 }
 
-.nav{
-  font-family: 'Oxygen', sans-serif;
+.presentations{
+  font-size: 15px !important;
+  font-family: 'Oxygen', sans-serif !important;
 }
 
-.companyName{
-  font: 40px;
+Button{
+  border-top: 15px;
+  font-family: 'Oxygen', sans-serif !important;
+}
+
+.welcome{
+  font-size: 45px !important;
+  font-family: 'Oxygen', sans-serif !important;
+}
+
+.jumbotron{
+    width:100%;
+    height: 85vh;
+    display:table;
+    background-image:  url('https://ak5.picdn.net/shutterstock/videos/15353785/thumb/10.jpg') !important;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding-top: 0px !important;
+}
+
+
+.container {
+width: 100% !important;
+padding: 0;
+margin: 0;
+}
+
+
+nav.no-border.navbar.navbar-inverse{
+  margin: 0 !important;
+}
+
+.centerHome{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+p{
+  font-size:15px !important;
+font-family: 'Oxygen', sans-serif !important;
+
+}
+
+.weNeed{
+  font-size: 20px !important;
+  font-weight: bold !important;
+  font-family: 'Oxygen', sans-serif !important;
+}
+
+.weNeed2{
+  font-size: 30px !important;
+  font-weight: bold !important;
+  font-family: 'Oxygen', sans-serif !important;
+  position: relative;
+  left: 25%;
+}
+
+a.btn.btn-primary.btn-lg{
+  position: relative;
+  left: 43%;
+
+}
+
+.featuredPresenter{
+    padding-top: 35px;
+    left: 32% !important;
+    position: relative;
+    font-family: 'Oxygen', sans-serif !important;
+    font-weight: bold;
+    font-size: 30px;
+
+}
+
+.featuredPresenterHome{
+    left: 32% !important;
+    position: relative;
+    font-family: 'Oxygen', sans-serif !important;
+    font-weight: bold;
+    font-size: 30px;
+
+}
+
+h4.display-8.text-black.frontlog{
+    left: 29% !important;
+    position: relative;
+    font-family: 'Oxygen', sans-serif !important;
+    margin-top: 15px !important;
+    font-weight: bold;
+    font-size: 30px;
+    padding-top: 20px;
+
+}
+
+.btn-margin{
+  margin: 13px 3px !important;
+}
+
+.login{
+  margin-top: 30px !important;
+  right: 4% !important;
+  position: relative;
+  font-family: 'Oxygen', sans-serif !important;
+
+}
+
+.lead{
+  left: 17% !important;
+  position: relative;
+  font-family: 'Oxygen', sans-serif !important;
+}
+
+.lead2{
+  left: 18% !important;
+  position: relative;
+  font-family: 'Oxygen', sans-serif !important;
+}
+
+.featuredStream{
+  left: 1.5% !important;
+  position: relative;
+  font-family: 'Oxygen', sans-serif !important;
+}
+
+.featuredStream2{
+  left: .5% !important;
+  position: relative;
+  font-family: 'Oxygen', sans-serif !important;
+}
+
+/*footer*/
+
+footer{
+    background-color: #E6BF83;
+}
+
+.navbar-fixed-bottom{
+  font-family: 'Oxygen',sans-serif;
+}
+
+.adress span , .menu span{
+   color: #FFF;
+   font-weight: 800;
+   border-bottom: 1px solid #c7c7c7;
+   padding-bottom: 10px;
+   margin-bottom: 20px;
+   display: block;
+   text-transform: uppercase;
+   font-size: 16px;
+   letter-spacing: 3px;
+}
+
+.adress li a , .menu li a{
+    color:#FFF;
+    letter-spacing: 3px;
+    text-decoration:none;
+    font-size:12px;
+}
+
+.adress li, .menu li{
+    margin-top: 5px;
+    list-style: none;
+}
+
+.adress li a:hover , .menu li a:hover{
+    color: #da3e44;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+.fa{
+    color: #da3e44;
+    margin-right: 10px;
+    font-size:14px;
+}
+
+footer{
+  height: 10% !important;
+}
+
+div.col-md-4.col-sm-6.col-xs-12{
+    left: 80px;
+}
+
+.copyright{
+    margin-left: 80px !important;
+}
+
+ul Span{
+  color: black !important;
+}
+a{
+  color: black !important;
+}
+
+footer span{
+  margin-bottom: 0px !important;
+  padding-bottom: 0px !important;
+  border-bottom: 2px solid white !important;
+}
+
+
+
+/* about section */
+.aboutText{
+  display: block;
+  margin: 0 auto ;
+  width: 450px;
+  word-wrap: break-word;
+}
+
+h4.featuredPresenter2{
+    left: 44% !important;
+    position: relative !important;
+    font-family: 'Oxygen', sans-serif !important;
+    margin-top: 15px !important;
+    font-weight: bold;
+    font-size: 30px;
+    padding-top: 20px;
+
+}
+
+.img-fluid.rounded{
+  position: relative!important;
+  left: 28%!important;
 }
