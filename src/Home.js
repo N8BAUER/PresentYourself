@@ -14,14 +14,6 @@ class Home extends Component {
         this.props.auth.login();
     }
 
-    // <p className="lead">
-    //   // <Link to="/scheduled" className="btn btn-danger"><span className="createorlog2">Scheduled Presentations</span></Link>
-    // </p>
-    // <p className="lead2">
-    //       // <Link to="/scheduled" className="btn btn-danger"><span className="createorlog2">Scheduled Presentations</span></Link>
-    //     </p>
-    // // <Link  className="btn btn-primary btn-lg" to="chat">Chat Room</Link>
-                                 // <p className="weNeed">We need you to sign up/log in with  before you can access the presentations. 😁</p>
     render() {
         const { isAuthenticated } = this.props.auth;
         return (
@@ -31,14 +23,10 @@ class Home extends Component {
                   {
                       !isAuthenticated() && (
                           <div>
-                             <p className="login"><a className="btn btn-primary btn-lg" onClick={this.login.bind(this)}>Login/Sign Up</a></p>
-
-                                <h4 className="featuredPresenterHome">Featured Presenter</h4><br />
-
-                          <div className="featuredStream">
-                            <iframe width="700" height="500" src="https://gaming.youtube.com/embed/live_stream?channel=UCNmE9_dnUapqlya3vdY5hqQ" frameborder="0"   allowFullScreen></iframe>
-
-                          </div>
+                             <p className="loginLive"><a className="btn btn-primary btn-lg" onClick={this.login.bind(this)}>Login/Sign Up</a></p>
+                               <p className="aboutText3">
+                                 To access content please Login or Sign Up
+                               </p>
 
 
                           </div>
@@ -59,7 +47,6 @@ class Home extends Component {
                   }
                   </div>
               </div>
-                {this.props.children}
             </div>
         );
     }

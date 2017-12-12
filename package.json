@@ -30,7 +30,7 @@
     "webfontloader": "^1.6.28"
   },
   "scripts": {
-    "start": "nodemon server.js & PORT=9999 react-scripts start",
+    "start": "nodemon server.js & PORT=9999/home react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

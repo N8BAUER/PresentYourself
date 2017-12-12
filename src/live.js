@@ -40,8 +40,7 @@ class Live extends Component {
                 </p>
 
                 <p className="aboutText3">
-                  {" "}
-                  To access this content please Login or Sign Up.{" "}
+                  To access this content please Login or Sign Up
                 </p>
               </div>
             )}
@@ -50,16 +49,26 @@ class Live extends Component {
                 <h4 className="livePresenter">Live Presenters</h4>
                 <br />
 
-                <div className="featuredStream2">
+                  <div className="featuredStream3">
+                    <a href="/Nate">
+                    <h4 href="JSPresentTwo" className="featuredPresenter3">
+                       PresentYourself Presenter Developer!
+                    </h4>
+                    </a>
+                                 <iframe width="700" height="500" src="https://gaming.youtube.com/embed/live_stream?channel=UCNmE9_dnUapqlya3vdY5hqQ" frameborder="0"   allowFullScreen></iframe>
+                  </div>
+
+
+                <div className="featuredStream3">
                   <a href="JSPresentTwo">
                     <h4 href="JSPresentTwo" className="featuredPresenter3">
-                      Title: Number Two Rated PresentYourself Presenter!
+                      Number Two Rated PresentYourself Presenter!
                     </h4>
                   </a>
                   <iframe
                     width="700"
                     height="500"
-                    src="https://gaming.youtube.com/embed/live_stream?channel=UCNmE9_dnUapqlya3vdY5hqQ"
+                    src="https://gaming.youtube.com/embed/live_stream?channel=UCNwKtOz1UTN0uKCKPcu31ig"
                     frameborder="0"
                     allowFullScreen
                   />
@@ -69,16 +78,16 @@ class Live extends Component {
                 <br />
                 <br />
 
-                <div className="featuredStream2">
+                <div className="featuredStream3">
                   <a href="JSPresent">
                     <h4 href="JSPresent" className="featuredPresenter3">
-                      Title: Number One Rated PresentYourself Presenter!
+                      Number One Rated PresentYourself Presenter!
                     </h4>
                   </a>
                   <iframe
                     width="700"
                     height="500"
-                    src="https://gaming.youtube.com/embed/live_stream?channel=UCNmE9_dnUapqlya3vdY5hqQ"
+                    src="https://gaming.youtube.com/embed/live_stream?channel=UC4_VXXvT25cb5YtkDvlAIIA"
                     frameborder="0"
                     allowFullScreen
                   />

@@ -195,9 +195,9 @@ h4.display-8.text-black.frontlog{
 }
 
 .login{
-  margin-top: 30px !important;
-  right: 4% !important;
-  position: relative;
+  top: 46  %;
+  left: 40% !important;
+  position: absolute;
   font-family: 'Oxygen', sans-serif !important;
 
 }
@@ -387,4 +387,18 @@ h4.featuredPresenterFuture{
 
 .col-xs-6{
   overflow: scroll;
+}
+
+.list-group{
+  padding-top: 40px;
+  width: 17%;
+  height: 17%;
+  position: absolute;
+  left: 42.5%;
+}
+
+li.list-group-item:hover{
+  background-color: gold !important;
+  border: inset;
+
 }

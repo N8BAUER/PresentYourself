@@ -11,6 +11,7 @@ import About from './About.js';
 import Live from './live.js';
 import JSPresent from './JSPresent';
 import JSPresentTwo from './JSPresentTwo';
+import Nate from './Nate';
 import FutureImplementations from './FutureImplementations';
 
 
@@ -33,6 +34,7 @@ export const makeMainRoutes = () => {
           <Route path="/Live" render={(props) => <Live auth={auth} {...props} />} />
           <Route path="/JSPresent" render={(props) => <JSPresent auth={auth} {...props} />} />
           <Route path="/JSPresentTwo" render={(props) => <JSPresentTwo auth={auth} {...props} />} />
+          <Route path="/Nate" render={(props) => <Nate auth={auth} {...props} />} />
           <Route path="/FutureImplementations" render={(props) => <FutureImplementations auth={auth} {...props} />} />
           <Route path="/chat" render={(props) => (
             !auth.isAuthenticated() ? (

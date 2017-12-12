@@ -1,6 +1,7 @@
 import React from "react";
 import { Jumbotron, Button } from "reactstrap";
 import { Link } from "react-router-dom";
+import { ListGroup, ListGroupItem, Badge } from 'reactstrap';
 
 export default class FutureImplementations extends React.Component {
   constructor(props) {
@@ -15,16 +16,16 @@ export default class FutureImplementations extends React.Component {
           <br />
           <h4 className="featuredPresenterFuture">Future Implementations</h4>
           <br />
-          <ul className="menu">
-            <li>Friends List</li>
-            <li>Improved Chat</li>
-            <li>Archived VODS</li>
-            <li>User Feedback Score</li>
-            <li>Fully Customizable User Pages</li>
-            <li>Scheduled Presentations Page</li>
-            <li>Video Review Page with Section</li>
-            <li>Private Stream via Sharable Link</li>
-          </ul>
+          <ListGroup className="futureMenu">
+            <ListGroupItem>Friends List</ListGroupItem>
+            <ListGroupItem>Improved Chat</ListGroupItem>
+            <ListGroupItem>Archived VODS</ListGroupItem>
+            <ListGroupItem>Individual Feedback Rating</ListGroupItem>
+            <ListGroupItem>Fully Customizable User Pages</ListGroupItem>
+            <ListGroupItem>Scheduled Presentations Page</ListGroupItem>
+            <ListGroupItem>Video Review Page with Section</ListGroupItem>
+            <ListGroupItem>Private Stream via Sharable Link</ListGroupItem>
+          </ListGroup>
         </Jumbotron>
       </div>
     );
