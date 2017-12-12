@@ -1,4 +1,7 @@
-
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 
 .container .jumbotron, .container-fluid .jumbotron {
   border-radius: 0px !important;
@@ -72,14 +75,25 @@
 
 
 .navbar-brand{
-  margin-top: 7px;
+  margin-top: 2px;
   position: absolute !important;
   left: 40% !important;
 }
 
 .presentations{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
   font-size: 15px !important;
   font-family: 'Oxygen', sans-serif !important;
+}
+
+.futureIMP{
+  padding-left: 15px;
+}
+
+span .whiteout.navbar-brand{
+
 }
 
 Button{
@@ -183,6 +197,14 @@ h4.display-8.text-black.frontlog{
 .login{
   margin-top: 30px !important;
   right: 4% !important;
+  position: relative;
+  font-family: 'Oxygen', sans-serif !important;
+
+}
+
+.loginLive{
+  margin-top: 30px !important;
+  right: 20% !important;
   position: relative;
   font-family: 'Oxygen', sans-serif !important;
 
@@ -295,9 +317,10 @@ footer span{
   word-wrap: break-word;
 }
 
-h4.featuredPresenter2{
+
+.featuredPresenter2{
     left: 44% !important;
-    position: relative !important;
+    position:relative !important;
     font-family: 'Oxygen', sans-serif !important;
     margin-top: 15px !important;
     font-weight: bold;
@@ -309,4 +332,59 @@ h4.featuredPresenter2{
 .img-fluid.rounded{
   position: relative!important;
   left: 28%!important;
+}
+
+/* live presentations */
+.livePresenter{
+    padding-top: 35px;
+    left: 36% !important;
+    position: relative;
+    font-family: 'Oxygen', sans-serif !important;
+    font-weight: bold;
+    font-size: 30px;
+
+}
+
+/* User page styling */
+.streamerPage{
+  padding-top: 90px;
+}
+
+/* future imp page*/
+h4.featuredPresenterFuture{
+    left: 40% !important;
+    position: relative !important;
+    font-family: 'Oxygen', sans-serif !important;
+    margin-top: 15px !important;
+    font-weight: bold;
+    font-size: 30px;
+    padding-top: 20px;
+
+}
+
+.menu{
+  position: relative !important;
+  left: 40% !important;
+}
+
+.aboutText{
+  display: block;
+  margin: 0 auto ;
+  width: 450px;
+  word-wrap: break-word;
+}
+
+/* streamer page */
+.show-GridOne{
+  display: flex;
+  flex-direction: row;
+}
+
+.userLayout{
+  margin-left: 10vh;
+  margin-top: 2vh;
+}
+
+.col-xs-6{
+  overflow: scroll;
 }

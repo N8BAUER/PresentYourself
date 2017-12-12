@@ -24,8 +24,12 @@ class App extends Component {
         <Navbar className="no-border" fluid inverse>
             <Navbar.Header>
           <div className="presentations">
-            <p href="">Live Presentations</p>
-            <p href="">Scheduled Presentations</p>
+            <a href="/Live">
+            <p href="/Live">Live </p>
+            </a>
+            <a href="/FutureImplementations">
+            <p href="" className="futureIMP">Future </p>
+            </a>
           </div>
           </Navbar.Header>
           <Navbar.Brand href="/home" className="whiteout"><span className="createorlog3">Present</span><span className="createorlogN8">Yourself</span></Navbar.Brand>
@@ -60,16 +64,6 @@ class App extends Component {
                   isAuthenticated() && (
                       <Button
                           className="btn-margin"
-                          onClick={this.goTo.bind(this, 'chat')}
-                      >
-                        Chat
-                      </Button>
-                  )
-              }
-              {
-                  isAuthenticated() && (
-                      <Button
-                          className="btn-margin"
                           onClick={this.logout.bind(this)}
                       >
                         Log Out
@@ -83,9 +77,10 @@ class App extends Component {
               <div className="row">
 
                        <div className="col-md-4 col-sm-6 col-xs-12">
+                         <div className="footerLogo">
                   <span className="createorlog4">Present</span><span className="createorlogN8">Yourself</span>
                   <p className="copyright">Copyright &#169;  2017</p>
-
+                          </div>
                        </div>
 
                        <div className="col-md-4 col-sm-6 col-xs-12">
