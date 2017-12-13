@@ -4,6 +4,7 @@ import "./App.css";
 import ToggleDisplay from "react-toggle-display";
 import Home from "./Home";
 
+
 class App extends Component {
   componentWillMount() {
     const { isAuthenticated, getProfile } = this.props.auth;
@@ -74,8 +75,6 @@ class App extends Component {
             )}
           </Nav>
         </Navbar>
-              
-
         <footer className="navbar-fixed-bottom">
           <div className="container">
             <div className="row">

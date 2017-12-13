@@ -48,6 +48,9 @@ class Live extends Component {
               <div>
                 <h4 className="livePresenter">Live Presenters</h4>
                 <br />
+                  <br />
+                  <br />
+
 
                   <div className="featuredStream3">
                     <a href="/Nate">
@@ -57,6 +60,10 @@ class Live extends Component {
                     </a>
                                  <iframe width="700" height="500" src="https://gaming.youtube.com/embed/live_stream?channel=UCNmE9_dnUapqlya3vdY5hqQ" frameborder="0"   allowFullScreen></iframe>
                   </div>
+
+                  <br />
+                  <br />
+                  <br />
 
 
                 <div className="featuredStream3">

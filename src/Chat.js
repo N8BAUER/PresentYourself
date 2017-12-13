@@ -29,10 +29,8 @@ class Chat extends Component {
       "messages",
       newmessage => {
         const newmessages = this.state.messages.concat([newmessage]);
-        const numToDelete =
-          newmessages.length > 4 ? newmessages.length - 4 : 0;
-        const deletedItems =
-          numToDelete > 0 ? newmessages.splice(0, numToDelete) : null;
+        const numToDelete = newmessages.length > 4 ? newmessages.length - 4 : 0;
+        const deletedItems = numToDelete > 0 ? newmessages.splice(0, numToDelete) : null;
         console.log("numToDelete", numToDelete);
         console.log("newmessages", newmessages);
         console.log("newmessage", newmessage);
