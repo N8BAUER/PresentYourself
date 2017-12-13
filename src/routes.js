@@ -1,62 +1,141 @@
-import React from 'react';
-import { Redirect, Route, Router } from 'react-router-dom';
-import App from './App';
-import Home from './Home';
-import Profile from './Profile';
-import Chat from './Chat';
-import Callback from './Callback';
-import Auth from './Auth/Auth';
-import history from './history';
-import About from './About.js';
-import Live from './live.js';
-import JSPresent from './JSPresent';
-import JSPresentTwo from './JSPresentTwo';
-import Nate from './Nate';
-import FutureImplementations from './FutureImplementations';
+import React from "react";
+import { Redirect, Route, Router } from "react-router-dom";
+import App from "./App";
+import Home from "./Home";
+import Profile from "./Profile";
+import Chat from "./Chat";
+import Callback from "./Callback";
+import Auth from "./Auth/Auth";
+import history from "./history";
+import About from "./About.js";
+import Live from "./live.js";
+import JSPresent from "./JSPresent";
+import JSPresentTwo from "./JSPresentTwo";
+import Nate from "./Nate";
+import FutureImplementations from "./FutureImplementations";
+import Footer from "./Footer";
+import Header from "./Header";
 
-
-
-const auth = new Auth();
+const auth = Auth();
 
 const handleAuthentication = (nextState, replace) => {
   if (/access_token|id_token|error/.test(nextState.location.hash)) {
     auth.handleAuthentication();
   }
-}
+};
 
 export const makeMainRoutes = () => {
+
   return (
     <Router history={history} component={App}>
-        <div>
-          <Route path="/" render={(props) => <App auth={auth} {...props} />} />
-          <Route path="/home" render={(props) => <Home auth={auth} {...props} />} />
-          <Route path="/About" render={(props) => <About auth={auth} {...props} />} />
-          <Route path="/Live" render={(props) => <Live auth={auth} {...props} />} />
-          <Route path="/JSPresent" render={(props) => <JSPresent auth={auth} {...props} />} />
-          <Route path="/JSPresentTwo" render={(props) => <JSPresentTwo auth={auth} {...props} />} />
-          <Route path="/Nate" render={(props) => <Nate auth={auth} {...props} />} />
-          <Route path="/FutureImplementations" render={(props) => <FutureImplementations auth={auth} {...props} />} />
-          <Route path="/chat" render={(props) => (
+      <div>
+        <Route
+          exact
+          path="/"
+          render={props => {
+            return (
+              <div>
+                <Header auth={auth} {...props} />
+                <Home auth={auth} {...props} />
+                <Footer auth={auth} {...props} />
+              </div>
+            );
+          }}
+        />
+        <Route
+          exact
+          path="/home"
+          render={props => {
+            return (
+              <div>
+                <Header auth={auth} {...props} />
+                <Home auth={auth} {...props} />
+                <Footer auth={auth} {...props} />
+              </div>
+            );
+          }}
+        />
+        <Route exact path="/About" render={props => {
+          return (
+            <div>
+              <Header auth={auth} {...props} />
+              <About auth={auth} {...props} />
+              <Footer auth={auth} {...props} />
+            </div>
+          );
+        }}/>
+        <Route exact path="/Live" render={props => {
+          return (
+            <div>
+              <Header auth={auth} {...props} />
+              <Live auth={auth} {...props} />
+              <Footer auth={auth} {...props} />
+            </div>
+          );
+        }}/>
+        <Route exact path="/JSPresent" render={props => {
+          return (
+            <div>
+              <Header auth={auth} {...props} />
+              <JSPresent auth={auth} {...props} />
+              <Footer auth={auth} {...props} />
+            </div>
+          );
+        }}/>
+        <Route exact path="/JSPresentTwo" render={props => {
+          return (
+            <div>
+              <Header auth={auth} {...props} />
+              <JSPresentTwo auth={auth} {...props} />
+              <Footer auth={auth} {...props} />
+            </div>
+          );
+        }}/>
+        <Route exact path="/Nate" render={props => {
+          return (
+            <div>
+              <Header auth={auth} {...props} />
+              <Nate auth={auth} {...props} />
+              <Footer auth={auth} {...props} />
+            </div>
+          );
+        }}/>
+        <Route exact path="/FutureImplementations" render={props => {
+          return (
+            <div>
+              <Header auth={auth} {...props} />
+              <FutureImplementations auth={auth} {...props} />
+              <Footer auth={auth} {...props} />
+            </div>
+          );
+        }}/>
+        <Route
+          exact
+          path="/chat"
+          render={props =>
             !auth.isAuthenticated() ? (
-              <Redirect to="/home"/>
+              <Redirect to="/home" />
             ) : (
               <div className="chatDiv">
-              <Chat auth={auth} {...props} />
+                <Chat auth={auth} {...props} />
               </div>
             )
-          )} />
-          <Route path="/profile" render={(props) => (
-            !auth.isAuthenticated() ? (
-              <Redirect to="/home"/>
-            ) : (
-              <Profile auth={auth} {...props} />
-            )
-          )} />
-          <Route path="/callback" render={(props) => {
+          }
+        />
+        <Route
+          exact
+          path="/profile"
+          render={props => (!auth.isAuthenticated() ? <Redirect to="/home" /> : <Profile auth={auth} {...props} />)}
+        />
+        <Route
+          exact
+          path="/callback"
+          render={props => {
             handleAuthentication(props);
-            return <Callback {...props} />
-          }}/>
-        </div>
-      </Router>
+            return <Callback {...props} />;
+          }}
+        />
+      </div>
+    </Router>
   );
-}
+};

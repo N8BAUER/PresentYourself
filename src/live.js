@@ -14,14 +14,6 @@ class Live extends Component {
     this.props.auth.login();
   }
 
-  // <p className="lead">
-  //   // <Link to="/scheduled" className="btn btn-danger"><span className="createorlog2">Scheduled Presentations</span></Link>
-  // </p>
-  // <p className="lead2">
-  //       // <Link to="/scheduled" className="btn btn-danger"><span className="createorlog2">Scheduled Presentations</span></Link>
-  //     </p>
-  // // <Link  className="btn btn-primary btn-lg" to="chat">Chat Room</Link>
-  // <p className="weNeed">We need you to sign up/log in with  before you can access the presentations. 😁</p>
   render() {
     const { isAuthenticated } = this.props.auth;
     return (
@@ -31,40 +23,39 @@ class Live extends Component {
             {!isAuthenticated() && (
               <div>
                 <p className="loginLive">
-                  <a
-                    className="btn btn-primary btn-lg"
-                    onClick={this.login.bind(this)}
-                  >
+                  <a className="btn btn-primary btn-lg" onClick={this.login.bind(this)}>
                     Login/Sign Up
                   </a>
                 </p>
 
-                <p className="aboutText3">
-                  To access this content please Login or Sign Up
-                </p>
+                <p className="aboutText3">To access this content please Login or Sign Up</p>
               </div>
             )}
             {isAuthenticated() && (
               <div>
                 <h4 className="livePresenter">Live Presenters</h4>
                 <br />
-                  <br />
-                  <br />
+                <br />
+                <br />
 
-
-                  <div className="featuredStream3">
-                    <a href="/Nate">
+                <div className="featuredStream3">
+                  <a href="/Nate">
                     <h4 href="JSPresentTwo" className="featuredPresenter3">
-                       PresentYourself Presenter Developer!
+                      PresentYourself Presenter Developer!
                     </h4>
-                    </a>
-                                 <iframe width="700" height="500" src="https://gaming.youtube.com/embed/live_stream?channel=UCNmE9_dnUapqlya3vdY5hqQ" frameborder="0"   allowFullScreen></iframe>
-                  </div>
+                  </a>
+                  <iframe
+                    width="700"
+                    height="500"
+                    src="https://gaming.youtube.com/embed/live_stream?channel=UCNmE9_dnUapqlya3vdY5hqQ"
+                    frameborder="0"
+                    allowFullScreen
+                  />
+                </div>
 
-                  <br />
-                  <br />
-                  <br />
-
+                <br />
+                <br />
+                <br />
 
                 <div className="featuredStream3">
                   <a href="JSPresentTwo">

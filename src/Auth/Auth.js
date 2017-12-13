@@ -3,7 +3,15 @@ import auth0 from 'auth0-js';
 import { AUTH_CONFIG } from './auth0-variables';
 import history from '../history';
 
-export default class Auth extends EventEmitter {
+var instance = null;
+
+export default function _singleton() {
+    if (instance) return instance
+    instance = new Auth(...arguments)
+    return instance
+}
+
+class Auth extends EventEmitter {
   auth0 = new auth0.WebAuth({
     domain: 'presentyourself.auth0.com',
     clientID: 'NfPf0Yx7NhViwf22JGqb9TXHwWZKufu6',

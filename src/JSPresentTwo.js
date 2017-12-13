@@ -13,13 +13,11 @@ class JSPresentTwo extends Component {
       <Row className="show-GridOne">
         <div className="userLayout">
           <div className="featuredStream2">
-            <h4 className="featuredPresenter3">
-              Title: Number Two Rated Presenter!
-            </h4>
+            <h4 className="featuredPresenter3">Title: Number Two Rated Presenter!</h4>
             <iframe
               width="700"
               height="500"
-              src="https://gaming.youtube.com/embed/live_stream?channel=UCNwKtOz1UTN0uKCKPcu31ig"
+              src="https://gaming.youtube.com/embed/live_stream?channel=UCNwKtOz1UTN0uKCKPcu31ig&autoplay=1"
               frameborder="0"
               allowFullScreen
             />

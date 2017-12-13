@@ -13,15 +13,15 @@ class Nate extends Component {
       <Row className="show-GridOne">
         <div className="userLayout">
           <div className="featuredStream2">
-          <a href="/Nate">
-            <h4 href="/Nate" className="featuredPresenter3">
-            PresentYourself Presenter Developer!
-            </h4>
+            <a href="/Nate">
+              <h4 href="/Nate" className="featuredPresenter3">
+                PresentYourself Presenter Developer!
+              </h4>
             </a>
             <iframe
               width="700"
               height="500"
-              src="https://gaming.youtube.com/embed/live_stream?channel=UCNmE9_dnUapqlya3vdY5hqQ"
+              src="https://gaming.youtube.com/embed/live_stream?channel=UCNmE9_dnUapqlya3vdY5hqQ&autoplay=1"
               frameBorder="0"
               allowFullScreen
             />

@@ -19,7 +19,7 @@ class JSPresent extends Component {
             <iframe
               width="700"
               height="500"
-              src="https://gaming.youtube.com/embed/live_stream?channel=UC4_VXXvT25cb5YtkDvlAIIA"
+              src="https://gaming.youtube.com/embed/live_stream?channel=UC4_VXXvT25cb5YtkDvlAIIA&autoplay=1"
               frameBorder="0"
               allowFullScreen
             />
