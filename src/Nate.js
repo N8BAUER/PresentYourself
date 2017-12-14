@@ -8,7 +8,29 @@ import Pusher from "pusher-js";
 import Chat from "./Chat";
 
 class Nate extends Component {
+
+  componentWillMount() {
+    const { isAuthenticated, getProfile } = this.props.auth;
+    console.log("this.props.auth", this.props.auth);
+    if (isAuthenticated()) {
+      getProfile();
+    }
+  }
+
+  goTo(route) {
+    this.props.history.replace(`/${route}`);
+  }
+
+  login() {
+    this.props.auth.login();
+  }
+
+  logout() {
+    this.props.auth.logout();
+  }
+
   render() {
+    const { isAuthenticated } = this.props.auth;
     return (
       <Row className="show-GridOne">
         <div className="userLayout">

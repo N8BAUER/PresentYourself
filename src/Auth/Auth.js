@@ -15,7 +15,7 @@ class Auth extends EventEmitter {
   auth0 = new auth0.WebAuth({
     domain: 'presentyourself.auth0.com',
     clientID: 'NfPf0Yx7NhViwf22JGqb9TXHwWZKufu6',
-    redirectUri: 'http://presentyourself.surge.sh/callback',
+    redirectUri: 'http://localhost:9999/callback',
     audience: 'https://presentyourself.auth0.com/userinfo',
     responseType: 'token id_token',
     scope: 'openid profile'
