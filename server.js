@@ -18,7 +18,13 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(morgan('combined'))
 app.use(cors({origin: true}))
+
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/build/index.html')
+})
+
 app.use('/static', express.static('./build'))
+app.use('/static', express.static('./build/static'))
 
 app.post("/message/send", (req, res) => {
   pusher.trigger("private-reactchat", "messages", {

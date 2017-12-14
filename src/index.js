@@ -6,7 +6,7 @@ import WebFont from 'webfontloader';
 
 WebFont.load({
   google: {
-    families: ['Oxygen Web:300,400,700', 'sans-serif']
+    families: ['Oxygen Web:300,400,700']
   }
 });
 
