@@ -91,15 +91,17 @@ export const makeMainRoutes = () => {
             </div>
           );
         }}/>
-        <Route exact path="/Nate" render={props => {
-          return (
+        <Route exact path="/Nate" render={props => !auth.isAuthenticated() ? (
+          <Redirect to="/home" />
+        ) : (
             <div>
               <Header auth={auth} {...props} />
               <Nate auth={auth} {...props} />
               <Footer auth={auth} {...props} />
             </div>
-          );
-        }}/>
+          )
+        }
+        />
         <Route exact path="/FutureImplementations" render={props => {
           return (
             <div>
@@ -125,7 +127,14 @@ export const makeMainRoutes = () => {
         <Route
           exact
           path="/profile"
-          render={props => (!auth.isAuthenticated() ? <Redirect to="/home" /> : <Profile auth={auth} {...props} />)}
+          render={props => !auth.isAuthenticated() ? (<Redirect to="/home" />) : (
+            <div>
+            <Header auth={auth} {...props} />
+            <Profile auth={auth} {...props} />
+            <Footer auth={auth} {...props} />
+            </div>
+            )
+          }
         />
         <Route
           exact

@@ -3,6 +3,8 @@ const path = require("path");
 const bodyParser = require("body-parser");
 const app = express();
 const Pusher = require("pusher");
+const morgan = require("morgan");
+const cors = require("cors")
 
 const pusher = new Pusher({
   appId: "442198",
@@ -14,6 +16,9 @@ const pusher = new Pusher({
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(morgan('combined'))
+app.use(cors({origin: true}))
+app.use('/static', express.static('./build'))
 
 app.post("/message/send", (req, res) => {
   pusher.trigger("private-reactchat", "messages", {

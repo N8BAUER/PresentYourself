@@ -9,6 +9,7 @@ class Profile extends Component {
 
     if (!userProfile) {
       getProfile((err, profile) => {
+        if (err) return console.error('Error loading profile', err)
         this.setState({ profile });
       });
     } else {

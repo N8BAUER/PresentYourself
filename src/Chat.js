@@ -66,6 +66,7 @@ class Chat extends Component {
     const message = messages.map(item => {
       return (
         <Grid key={item.message}>
+          {message}
           <Row className="show-grid">
             <Col xs={12}>
               <div className="chatmessage-container">

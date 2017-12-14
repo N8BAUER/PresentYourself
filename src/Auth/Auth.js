@@ -15,13 +15,13 @@ class Auth extends EventEmitter {
   auth0 = new auth0.WebAuth({
     domain: 'presentyourself.auth0.com',
     clientID: 'NfPf0Yx7NhViwf22JGqb9TXHwWZKufu6',
-    redirectUri: 'http://localhost:9999/callback',
+    redirectUri: 'http://presentyourself.surge.sh/callback',
     audience: 'https://presentyourself.auth0.com/userinfo',
     responseType: 'token id_token',
     scope: 'openid profile'
   });
 
-  userProfile;
+  userProfile = {};
 
   constructor() {
     super();
@@ -75,10 +75,15 @@ class Auth extends EventEmitter {
   }
 
   getProfile(cb) {
+    if (!cb) {cb = console.log.bind(console, 'Auth.getProfile: No callback defined:')}
     let accessToken = this.getAccessToken();
     this.auth0.client.userInfo(accessToken, (err, profile) => {
-      console.log(accessToken)
-      console.log("https://www.googleapis.com/youtube/v3/channels?part=id&mine=true&access_token=" + accessToken)
+      if (err) {
+        console.error('getProfile Error:', err)
+        return cb(err)
+      }
+      // console.log(accessToken)
+      // console.log("https://www.googleapis.com/youtube/v3/channels?part=id&mine=true&access_token=" + accessToken)
       if (profile) {
         this.userProfile = profile;
         localStorage.username = profile.nickname;
