@@ -10,3 +10,9 @@ It's a streaming service to rehearse your upcoming presentations to a live audie
 ..*A shareable URL to stream privately to only the users you selected.
 ..*A friends list
 ..*Private messaging
+
+     --  --
+    -- -- --
+     --  --
+      -  -
+       --
