@@ -5,11 +5,11 @@
   "dependencies": {
     "auth0-js": "^8.7.0",
     "axios": "^0.16.2",
-    "body-parser": "^1.17.2",
+    "body-parser": "^1.20.1",
     "bootstrap": "^3.3.7",
     "cors": "^2.8.4",
     "events": "^1.1.1",
-    "express": "^4.15.3",
+    "express": "^4.18.2",
     "forever": "^0.15.3",
     "google-fonts": "^1.0.0",
     "googlefonts": "^1.1.3",
