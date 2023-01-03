@@ -23,7 +23,7 @@
     "react-dom": "^15.5.4",
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
-    "react-scripts": "0.9.5",
+    "react-scripts": "5.0.1",
     "react-strap": "0.0.1",
     "react-toggle-display": "^2.2.0",
     "react-transition-group": "^2.2.1",
